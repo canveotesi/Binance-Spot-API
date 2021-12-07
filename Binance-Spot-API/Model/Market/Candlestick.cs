@@ -6,15 +6,15 @@ namespace Binance_Spot_API.Model.Market
     public class Candlestick
     {
         public long OpenTime { get; set; }
-        public decimal Open { get; set; }
-        public decimal High { get; set; }
-        public decimal Low { get; set; }
-        public decimal Close { get; set; }
-        public decimal Volume { get; set; }
+        public double Open { get; set; }
+        public double High { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public double Volume { get; set; }
         public long CloseTime { get; set; }
-        public decimal QuoteAssetVolume { get; set; }
+        public double QuoteAssetVolume { get; set; }
         public int NumberOfTrade { get; set; }
-        public decimal TakerBuyBaseAssetVolume { get; set; }
-        public decimal TakerBuyQuoteAssetVolume { get; set; }
+        public double TakerBuyBaseAssetVolume { get; set; }
+        public double TakerBuyQuoteAssetVolume { get; set; }
     }
 }

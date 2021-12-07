@@ -13,9 +13,9 @@ namespace Binance_Spot_API.Model.Websocket
         [JsonProperty("a")]
         public long AggregateTradeId { get; set; }
         [JsonProperty("p")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         [JsonProperty("q")]
-        public decimal Quantity { get; set; }
+        public double Quantity { get; set; }
         [JsonProperty("f")]
         public int FirstTradeId { get; set; }
         [JsonProperty("l")]

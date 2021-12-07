@@ -8,31 +8,31 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("symbol")]
         public string Symbol { get; set; }
         [JsonProperty("priceChange")]
-        public decimal PriceChange { get; set; }
+        public double PriceChange { get; set; }
         [JsonProperty("priceChangePercent")]
-        public decimal PriceChangePercent { get; set; }
+        public double PriceChangePercent { get; set; }
         [JsonProperty("weightedAvgPrice")]
-        public decimal WeightedAvgPrice { get; set; }
+        public double WeightedAvgPrice { get; set; }
         [JsonProperty("prevClosePrice")]
-        public decimal PrevClosePrice { get; set; }
+        public double PrevClosePrice { get; set; }
         [JsonProperty("lastPrice")]
-        public decimal LastPrice { get; set; }
+        public double LastPrice { get; set; }
         [JsonProperty("lastQty")]
-        public decimal LastQuantity { get; set; }
+        public double LastQuantity { get; set; }
         [JsonProperty("bidPrice")]
-        public decimal BidPrice { get; set; }
+        public double BidPrice { get; set; }
         [JsonProperty("askPrice")]
-        public decimal AskPrice { get; set; }
+        public double AskPrice { get; set; }
         [JsonProperty("openPrice")]
-        public decimal OpenPrice { get; set; }
+        public double OpenPrice { get; set; }
         [JsonProperty("highPrice")]
-        public decimal HighPrice { get; set; }
+        public double HighPrice { get; set; }
         [JsonProperty("lowPrice")]
-        public decimal LowPrice { get; set; }
+        public double LowPrice { get; set; }
         [JsonProperty("volume")]
-        public decimal Volume { get; set; }
+        public double Volume { get; set; }
         [JsonProperty("quoteVolume")]
-        public decimal QuoteVolume { get; set; }
+        public double QuoteVolume { get; set; }
         [JsonProperty("openTime")]
         public long OpenTime { get; set; }
         [JsonProperty("closeTime")]

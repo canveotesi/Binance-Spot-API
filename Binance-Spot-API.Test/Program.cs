@@ -10,7 +10,7 @@ namespace Binance_Spot_API.Test
         {
             BinanceTest test = new BinanceTest();
 
-            test.TestConnectivity();
+            test.GetCandlesticks();
         }
     }
 }

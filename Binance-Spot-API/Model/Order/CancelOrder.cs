@@ -10,13 +10,13 @@ namespace Binance_Spot_API.Model.Order
         [JsonProperty("origClientOrderId")]
         public string origClientOrderId { get; set; }
         [JsonProperty("price")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         [JsonProperty("origQty")]
-        public decimal OrigQty { get; set; }
+        public double OrigQty { get; set; }
         [JsonProperty("executedQty")]
-        public decimal ExecutedQty { get; set; }
+        public double ExecutedQty { get; set; }
         [JsonProperty("cummulativeQuoteQty")]
-        public decimal CummulativeQuoteQty { get; set; }
+        public double CummulativeQuoteQty { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         [JsonProperty("status")]
         public OrderStatus Status { get; set; }

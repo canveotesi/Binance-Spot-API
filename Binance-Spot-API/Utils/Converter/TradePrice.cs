@@ -20,8 +20,8 @@ namespace Binance_Spot_API.Utils.Converter
 
             foreach(var item in items)
             {
-                var price = item[0].ToObject<decimal>();
-                var quantity = item[1].ToObject<decimal>();
+                var price = item[0].ToObject<double>();
+                var quantity = item[1].ToObject<double>();
 
                 tradePriceList.Add(new Model.Market.TradePrice { Price = price, Quantity = quantity });
             }

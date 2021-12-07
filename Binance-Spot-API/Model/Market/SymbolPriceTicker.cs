@@ -8,6 +8,6 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("symbol")]
         public string Symbol { get; set; }
         [JsonProperty("price")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
     }
 }

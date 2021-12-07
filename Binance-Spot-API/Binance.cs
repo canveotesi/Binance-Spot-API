@@ -310,15 +310,15 @@ namespace Binance_Spot_API
         /// <param name="timeInForce">Any order with an icebergQty MUST have timeInForce set to GTC.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000</param>
         /// <returns></returns>
-        public async Task<dynamic> TestNewOrder(string symbol, OrderSide side, OrderType type, decimal? price = null, decimal? quantity = null, decimal? quoteOrderQty = null, decimal? icebergQty = null, decimal? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000)
+        public async Task<dynamic> TestNewOrder(string symbol, OrderSide side, OrderType type, double? price = null, double? quantity = null, double? quoteOrderQty = null, double? icebergQty = null, double? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&side={side.GetMemberAttr()}&type={type.GetMemberAttr()}&recvWindow={recvWindow}"
                 + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) ? $"&timeInForce={timeInForce.GetMemberAttr()}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.MARKET || type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && quantity > 0m ? $"&quantity={quantity}" : "")
-                + ((type == OrderType.MARKET) && quoteOrderQty > 0m ? $"&quoteOrderQty={quoteOrderQty}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && price > 0m ? $"&price={price}" : "")
-                + ((type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT) && stopPrice > 0m ? $"&stopPrice={stopPrice}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) && icebergQty > 0m ? $"&icebergQty={icebergQty}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.MARKET || type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && quantity > 0 ? $"&quantity={quantity}" : "")
+                + ((type == OrderType.MARKET) && quoteOrderQty > 0 ? $"&quoteOrderQty={quoteOrderQty}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && price > 0 ? $"&price={price}" : "")
+                + ((type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT) && stopPrice > 0 ? $"&stopPrice={stopPrice}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) && icebergQty > 0 ? $"&icebergQty={icebergQty}" : "")
                 + ((orderResponseType.HasValue) ? $"&newOrderRespType={orderResponseType.GetMemberAttr()}" : "");
 
 
@@ -344,15 +344,15 @@ namespace Binance_Spot_API
         /// <param name="timeInForce">Any order with an icebergQty MUST have timeInForce set to GTC.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000.</param>
         /// <returns></returns>
-        public async Task<Order> NewOrder(string symbol, OrderSide side, OrderType type, decimal? price = null, decimal? quantity = null, decimal? quoteOrderQty = null, decimal? icebergQty = null, decimal? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000)
+        public async Task<Order> NewOrder(string symbol, OrderSide side, OrderType type, double? price = null, double? quantity = null, double? quoteOrderQty = null, double? icebergQty = null, double? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&side={side.GetMemberAttr()}&type={type.GetMemberAttr()}&recvWindow={recvWindow}"
                 + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) ? $"&timeInForce={timeInForce.GetMemberAttr()}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.MARKET || type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && quantity > 0m ? $"&quantity={quantity}" : "")
-                + ((type == OrderType.MARKET) && quoteOrderQty > 0m ? $"&quoteOrderQty={quoteOrderQty}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && price > 0m ? $"&price={price}" : "")
-                + ((type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT) && stopPrice > 0m ? $"&stopPrice={stopPrice}" : "")
-                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) && icebergQty > 0m ? $"&icebergQty={icebergQty}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.MARKET || type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && quantity > 0 ? $"&quantity={quantity}" : "")
+                + ((type == OrderType.MARKET) && quoteOrderQty > 0 ? $"&quoteOrderQty={quoteOrderQty}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT || type == OrderType.LIMIT_MAKER) && price > 0 ? $"&price={price}" : "")
+                + ((type == OrderType.STOP_LOSS || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT || type == OrderType.TAKE_PROFIT_LIMIT) && stopPrice > 0 ? $"&stopPrice={stopPrice}" : "")
+                + ((type == OrderType.LIMIT || type == OrderType.STOP_LOSS_LIMIT || type == OrderType.TAKE_PROFIT_LIMIT) && icebergQty > 0 ? $"&icebergQty={icebergQty}" : "")
                 + ((orderResponseType.HasValue) ? $"&newOrderRespType={orderResponseType.GetMemberAttr()}" : "");
 
 

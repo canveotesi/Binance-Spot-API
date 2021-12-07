@@ -8,11 +8,11 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("id")]
         public int ID { get; set; }
         [JsonProperty("price")]
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         [JsonProperty("qty")]
-        public decimal Quantity { get; set; }
+        public double Quantity { get; set; }
         [JsonProperty("quoteQty")]
-        public decimal QuoteQuantity { get; set; }
+        public double QuoteQuantity { get; set; }
         [JsonProperty("time")]
         public long Time { get; set; }
         [JsonProperty("isBuyerMaker")]
