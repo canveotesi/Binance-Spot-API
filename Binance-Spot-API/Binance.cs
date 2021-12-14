@@ -78,7 +78,7 @@ namespace Binance_Spot_API
         /// <param name="symbol">Symbol of Coin.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<TradeList>> GetRecentTradeList(string symbol, int limit = 500)
+        public async Task<IEnumerable<TradeList>> GetRecentTradeList(string symbol, int limit = 1000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&limit={limit}";
 
@@ -92,7 +92,7 @@ namespace Binance_Spot_API
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="fromId">Trade id to fetch from. Default gets most recent trades.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<TradeList>> GetHistoricalTrades(string symbol, int limit = 500, long? fromId = null)
+        public async Task<IEnumerable<TradeList>> GetHistoricalTrades(string symbol, int limit = 1000, long? fromId = null)
         {
             var parameters = $"symbol={symbol.ToUpper()}&limit={limit}" + (fromId > 0 ? $"&fromId={fromId}" : "");
 
@@ -108,7 +108,7 @@ namespace Binance_Spot_API
         /// <param name="endTime">Timestamp in ms to get aggregate trades until INCLUSIVE.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<AggregateTradeList>> GetAggregateTradeList(string symbol, long? fromId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 500)
+        public async Task<IEnumerable<AggregateTradeList>> GetAggregateTradeList(string symbol, long? fromId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000)
         {
             var parameters = $"symbol={symbol.ToUpper()}" +
                 (fromId > 0 ? $"&fromId={fromId}" : "") +
@@ -128,7 +128,7 @@ namespace Binance_Spot_API
         /// <param name="endTime">End date of chart data.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<Model.Market.Candlestick>> GetCandlesticks(string symbol, Interval interval, DateTime? startTime = null, DateTime? endTime = null, int limit = 500)
+        public async Task<IEnumerable<Model.Market.Candlestick>> GetCandlesticks(string symbol, Interval interval, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&interval={interval.GetMemberAttr()}" + 
                 (startTime.HasValue ? $"&startTime={Utils.Timestamp.Generate(startTime.Value)}" : "") +
@@ -430,7 +430,7 @@ namespace Binance_Spot_API
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<QueryOrder>> GetAllOrders(string symbol, long? orderId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 500, long recvWindow = 5000)
+        public async Task<IEnumerable<QueryOrder>> GetAllOrders(string symbol, long? orderId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000, long recvWindow = 5000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&recvWindow={recvWindow}&limit={limit}"
                 +(orderId > 0 ? $"&orderId={orderId}" : "")
@@ -462,7 +462,7 @@ namespace Binance_Spot_API
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000.</param>
         /// <returns></returns>
-        public async Task<IEnumerable<AccountTradeList>> GetAccountTradeList(string symbol, DateTime? startTime = null, DateTime? endTime = null, long? fromId = null, int limit = 500, long recvWindow = 5000)
+        public async Task<IEnumerable<AccountTradeList>> GetAccountTradeList(string symbol, DateTime? startTime = null, DateTime? endTime = null, long? fromId = null, int limit = 1000, long recvWindow = 5000)
         {
             var parameters = $"symbol={symbol.ToUpper()}&recvWindow={recvWindow}&limit={limit}"
                 + (fromId > 0 ? $"&fromId={fromId}" : "")

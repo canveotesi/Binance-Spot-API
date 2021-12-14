@@ -50,7 +50,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="symbol">Symbol of Coin.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        Task<IEnumerable<TradeList>> GetRecentTradeList(string symbol, int limit = 500);
+        Task<IEnumerable<TradeList>> GetRecentTradeList(string symbol, int limit = 1000);
 
         /// <summary>
         /// Get older market trades.
@@ -59,7 +59,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="fromId">Trade id to fetch from. Default gets most recent trades.</param>
         /// <returns></returns>
-        Task<IEnumerable<TradeList>> GetHistoricalTrades(string symbol, int limit = 500, long? fromId = null);
+        Task<IEnumerable<TradeList>> GetHistoricalTrades(string symbol, int limit = 1000, long? fromId = null);
 
         /// <summary>
         /// Get compressed, aggregate trades. Trades that fill at the time, from the same order, with the same price will have the quantity aggregated.
@@ -70,7 +70,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="endTime">Timestamp in ms to get aggregate trades until INCLUSIVE.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        Task<IEnumerable<AggregateTradeList>> GetAggregateTradeList(string symbol, long? fromId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 500);
+        Task<IEnumerable<AggregateTradeList>> GetAggregateTradeList(string symbol, long? fromId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000);
 
         /// <summary>
         /// Get Kline/Candlestick Data
@@ -81,7 +81,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="endTime">End date of chart data.</param>
         /// <param name="limit">Default 500; max 1000.</param>
         /// <returns></returns>
-        Task<IEnumerable<Model.Market.Candlestick>> GetCandlesticks(string symbol, Interval interval, DateTime? startTime = null, DateTime? endTime = null, int limit = 500);
+        Task<IEnumerable<Model.Market.Candlestick>> GetCandlesticks(string symbol, Interval interval, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000);
 
         /// <summary>
         /// Current average price for a symbol.
@@ -260,7 +260,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000.</param>
         /// <returns></returns>
-        Task<IEnumerable<QueryOrder>> GetAllOrders(string symbol, long? orderId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 500, long recvWindow = 5000);
+        Task<IEnumerable<QueryOrder>> GetAllOrders(string symbol, long? orderId = null, DateTime? startTime = null, DateTime? endTime = null, int limit = 1000, long recvWindow = 5000);
 
         /// <summary>
         /// Get current account information.
@@ -279,7 +279,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="limit">Default 500; max 1000.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000.</param>
         /// <returns></returns>
-        Task<IEnumerable<AccountTradeList>> GetAccountTradeList(string symbol, DateTime? startTime = null, DateTime? endTime = null, long? fromId = null, int limit = 500, long recvWindow = 5000);
+        Task<IEnumerable<AccountTradeList>> GetAccountTradeList(string symbol, DateTime? startTime = null, DateTime? endTime = null, long? fromId = null, int limit = 1000, long recvWindow = 5000);
         #endregion
     }
 
