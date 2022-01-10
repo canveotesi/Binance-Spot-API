@@ -54,9 +54,9 @@ namespace Binance_Spot_API
         /// Exchange Info
         /// </summary>
         /// <returns></returns>
-        public async Task<dynamic> ExchangeInformation()
+        public async Task<ExchangeInfo> ExchangeInformation()
         {
-            return await _httpConfiguration.SendAsyncRequest<dynamic>(HttpMethod.Get, Endpoint.ExchangeInformation);
+            return await _httpConfiguration.SendAsyncRequest<ExchangeInfo>(HttpMethod.Get, Endpoint.ExchangeInformation);
         }
 
         /// <summary>

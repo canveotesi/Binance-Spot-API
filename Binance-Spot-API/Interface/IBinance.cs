@@ -34,7 +34,7 @@ namespace Binance_Spot_API.Interface
         /// Exchange Info
         /// </summary>
         /// <returns></returns>
-        Task<dynamic> ExchangeInformation();
+        Task<ExchangeInfo> ExchangeInformation();
 
         /// <summary>
         /// Get Order Book.
