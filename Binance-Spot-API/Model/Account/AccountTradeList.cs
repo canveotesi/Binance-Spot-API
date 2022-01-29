@@ -13,13 +13,13 @@ namespace Binance_Spot_API.Model.Account
         [JsonProperty("orderListId")]
         public int OrderListId { get; set; }
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         [JsonProperty("qty")]
-        public double Quantity { get; set; }
+        public decimal Quantity { get; set; }
         [JsonProperty("quoteQty")]
-        public double QuoteQuantity { get; set; }
+        public decimal QuoteQuantity { get; set; }
         [JsonProperty("commission")]
-        public double Commission { get; set; }
+        public decimal Commission { get; set; }
         [JsonProperty("commissionAsset")]
         public string CommissionAsset { get; set; }
         [JsonProperty("time")]

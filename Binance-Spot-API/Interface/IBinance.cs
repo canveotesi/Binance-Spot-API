@@ -194,7 +194,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="timeInForce">Any order with an icebergQty MUST have timeInForce set to GTC.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000</param>
         /// <returns></returns>
-        Task<dynamic> TestNewOrder(string symbol, OrderSide side, OrderType type, double? price = null, double? quantity = null, double? quoteOrderQty = null, double? icebergQty = null, double? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000);
+        Task<dynamic> TestNewOrder(string symbol, OrderSide side, OrderType type, decimal? price = null, decimal? quantity = null, decimal? quoteOrderQty = null, decimal? icebergQty = null, decimal? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000);
 
         /// <summary>
         /// Send new order.
@@ -215,7 +215,7 @@ namespace Binance_Spot_API.Interface
         /// <param name="timeInForce">Any order with an icebergQty MUST have timeInForce set to GTC.</param>
         /// <param name="recvWindow">The value cannot be greater than 60000</param>
         /// <returns></returns>
-        Task<Order> NewOrder(string symbol, OrderSide side, OrderType type, double? price = null, double? quantity = null, double? quoteOrderQty = null, double? icebergQty = null, double? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000);
+        Task<Order> NewOrder(string symbol, OrderSide side, OrderType type, decimal? price = null, decimal? quantity = null, decimal? quoteOrderQty = null, decimal? icebergQty = null, decimal? stopPrice = null, OrderResponseType? orderResponseType = OrderResponseType.ACK, TimeInForce timeInForce = TimeInForce.GTC, long? recvWindow = 5000);
 
         /// <summary>
         /// Cancel an active order. Either orderId or origClientOrderId must be sent.

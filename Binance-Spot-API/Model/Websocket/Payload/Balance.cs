@@ -7,8 +7,8 @@ namespace Binance_Spot_API.Model.Websocket.Payload
         [JsonProperty("a")]
         public string Asset { get; set; }
         [JsonProperty("f")]
-        public double Free { get; set; }
+        public decimal Free { get; set; }
         [JsonProperty("l")]
-        public double Locked { get; set; }
+        public decimal Locked { get; set; }
     }
 }

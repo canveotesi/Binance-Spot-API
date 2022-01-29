@@ -8,25 +8,25 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("filterType")]
         public string FilterType { get; set; }
         [JsonProperty("minPrice")]
-        public double minPrice { get; set; }
+        public decimal minPrice { get; set; }
         [JsonProperty("maxPrice")]
-        public double MaxPrice { get; set; }
+        public decimal MaxPrice { get; set; }
         [JsonProperty("tickSize")]
-        public double TickSize { get; set; }
+        public decimal TickSize { get; set; }
         [JsonProperty("multiplierUp")]
-        public double MultiplierUp { get; set; }
+        public decimal MultiplierUp { get; set; }
         [JsonProperty("multiplierDown")]
-        public double MultiplierDown { get; set; }
+        public decimal MultiplierDown { get; set; }
         [JsonProperty("avgPriceMins")]
         public int AvgPriceMins { get; set; }
         [JsonProperty("minQty")]
-        public double MinQty { get; set; }
+        public decimal MinQty { get; set; }
         [JsonProperty("maxQty")]
-        public double MaxQty { get; set; }
+        public decimal MaxQty { get; set; }
         [JsonProperty("stepSize")]
-        public double StepSize { get; set; }
+        public decimal StepSize { get; set; }
         [JsonProperty("minNotional")]
-        public double MinNotional { get; set; }
+        public decimal MinNotional { get; set; }
         [JsonProperty("applyToMarket")]
         public bool ApplyToMarket { get; set; }
         [JsonProperty("limit")]
@@ -38,7 +38,7 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("maxNumIcebergOrders")]
         public int MaxNumIcebergOrders { get; set; }
         [JsonProperty("maxPosition")]
-        public double MaxPosition { get; set; }
+        public decimal MaxPosition { get; set; }
 
     }
 }

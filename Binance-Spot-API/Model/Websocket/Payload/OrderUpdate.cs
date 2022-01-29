@@ -20,13 +20,13 @@ namespace Binance_Spot_API.Model.Websocket.Payload
         [JsonProperty("f")]
         public TimeInForce TimeInForce { get; set; }
         [JsonProperty("q")]
-        public double Quantity { get; set; }
+        public decimal Quantity { get; set; }
         [JsonProperty("p")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         [JsonProperty("P")]
-        public double StopPrice { get; set; }
+        public decimal StopPrice { get; set; }
         [JsonProperty("F")]
-        public double IcebergQuantity { get; set; }
+        public decimal IcebergQuantity { get; set; }
         [JsonProperty("g")]
         public int OrderListId { get; set; }
         [JsonProperty("C")]
@@ -42,11 +42,11 @@ namespace Binance_Spot_API.Model.Websocket.Payload
         [JsonProperty("i")]
         public long OrderId { get; set; }
         [JsonProperty("l")]
-        public double LastExecutedQuantity { get; set; }
+        public decimal LastExecutedQuantity { get; set; }
         [JsonProperty("z")]
-        public double CumulativeFilledQuantity { get; set; }
+        public decimal CumulativeFilledQuantity { get; set; }
         [JsonProperty("L")]
-        public double LastExecutedPrice { get; set; }
+        public decimal LastExecutedPrice { get; set; }
         [JsonProperty("n")]
         public int CommissionAmount { get; set; }
         [JsonProperty("N")]
@@ -62,10 +62,10 @@ namespace Binance_Spot_API.Model.Websocket.Payload
         [JsonProperty("O")]
         public long CreationTime { get; set; }
         [JsonProperty("Z")]
-        public double CumulativeTransactedQuantity { get; set; }
+        public decimal CumulativeTransactedQuantity { get; set; }
         [JsonProperty("Y")]
-        public double QuoteAssetTransactedQuantity { get; set; }
+        public decimal QuoteAssetTransactedQuantity { get; set; }
         [JsonProperty("Q")]
-        public double QuoteOrderQuantity { get; set; }
+        public decimal QuoteOrderQuantity { get; set; }
     }
 }

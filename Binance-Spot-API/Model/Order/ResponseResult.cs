@@ -7,13 +7,13 @@ namespace Binance_Spot_API.Model.Order
     public partial class ResponseResult : ResponseAcknowledge
     {
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         [JsonProperty("origQty")]
-        public double OrigQty { get; set; }
+        public decimal OrigQty { get; set; }
         [JsonProperty("executedQty")]
-        public double ExecutedQty { get; set; }
+        public decimal ExecutedQty { get; set; }
         [JsonProperty("cummulativeQuoteQty")]
-        public double CummulativeQuoteQty { get; set; }
+        public decimal CummulativeQuoteQty { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         [JsonProperty("status")]
         public OrderStatus Status { get; set; }

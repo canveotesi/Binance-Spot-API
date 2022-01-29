@@ -7,8 +7,8 @@ namespace Binance_Spot_API.Model.Account
         [JsonProperty("asset")]
         public string Asset { get; set; }
         [JsonProperty("free")]
-        public double Free { get; set; }
+        public decimal Free { get; set; }
         [JsonProperty("locked")]
-        public double Locked { get; set; }
+        public decimal Locked { get; set; }
     }
 }

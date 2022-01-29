@@ -7,13 +7,13 @@ namespace Binance_Spot_API.Model.Order
     public class QueryOrder : Abstract.Order
     {
         [JsonProperty("price")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         [JsonProperty("origQty")]
-        public double OrigQty { get; set; }
+        public decimal OrigQty { get; set; }
         [JsonProperty("executedQty")]
-        public double ExecutedQty { get; set; }
+        public decimal ExecutedQty { get; set; }
         [JsonProperty("cummulativeQuoteQty")]
-        public double CummulativeQuoteQty { get; set; }
+        public decimal CummulativeQuoteQty { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         [JsonProperty("status")]
         public OrderStatus Status { get; set; }
@@ -27,9 +27,9 @@ namespace Binance_Spot_API.Model.Order
         [JsonProperty("side")]
         public OrderSide Side { get; set; }
         [JsonProperty("stopPrice")]
-        public double StopPrice { get; set; }
+        public decimal StopPrice { get; set; }
         [JsonProperty("icebergQty")]
-        public double IcebergQty { get; set; }
+        public decimal IcebergQty { get; set; }
         [JsonProperty("time")]
         public long Time { get; set; }
         [JsonProperty("updateTime")]
@@ -37,6 +37,6 @@ namespace Binance_Spot_API.Model.Order
         [JsonProperty("isWorking")]
         public bool IsWorking { get; set; }
         [JsonProperty("origQuoteOrderQty")]
-        public double OrigQuoteOrderQty { get; set; }
+        public decimal OrigQuoteOrderQty { get; set; }
     }
 }

@@ -8,9 +8,9 @@ namespace Binance_Spot_API.Model.Market
         [JsonProperty("a")]
         public int TradeId { get; set; }
         [JsonProperty("p")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         [JsonProperty("q")]
-        public double Quantity { get; set; }
+        public decimal Quantity { get; set; }
         [JsonProperty("f")]
         public int FirstTradeId { get; set; }
         [JsonProperty("l")]

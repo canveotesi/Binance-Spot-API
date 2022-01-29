@@ -18,16 +18,16 @@ namespace Binance_Spot_API.Utils.Converter
             
             return new Model.Market.Candlestick { 
                 OpenTime = candles.ElementAt(0).ToObject<long>(), 
-                Open = candles.ElementAt(1).ToObject<double>(), 
-                High = candles.ElementAt(2).ToObject<double>(), 
-                Low = candles.ElementAt(3).ToObject<double>(), 
-                Close = candles.ElementAt(4).ToObject<double>(), 
-                Volume = candles.ElementAt(5).ToObject<double>(), 
+                Open = candles.ElementAt(1).ToObject<decimal>(), 
+                High = candles.ElementAt(2).ToObject<decimal>(), 
+                Low = candles.ElementAt(3).ToObject<decimal>(), 
+                Close = candles.ElementAt(4).ToObject<decimal>(), 
+                Volume = candles.ElementAt(5).ToObject<decimal>(), 
                 CloseTime = candles.ElementAt(6).ToObject<long>(), 
-                QuoteAssetVolume = candles.ElementAt(7).ToObject<double>(), 
+                QuoteAssetVolume = candles.ElementAt(7).ToObject<decimal>(), 
                 NumberOfTrade = candles.ElementAt(8).ToObject<int>(), 
-                TakerBuyBaseAssetVolume = candles.ElementAt(9).ToObject<double>(), 
-                TakerBuyQuoteAssetVolume = candles.ElementAt(10).ToObject<double>()
+                TakerBuyBaseAssetVolume = candles.ElementAt(9).ToObject<decimal>(), 
+                TakerBuyQuoteAssetVolume = candles.ElementAt(10).ToObject<decimal>()
             };
         }
 

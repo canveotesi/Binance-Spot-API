@@ -17,24 +17,24 @@ namespace Binance_Spot_API.Model.Websocket
         [JsonProperty("L")]
         public int LastTradeId { get; set; }
         [JsonProperty("o")]
-        public double OpenPrice { get; set; }
+        public decimal OpenPrice { get; set; }
         [JsonProperty("c")]
-        public double ClosePrice { get; set; }
+        public decimal ClosePrice { get; set; }
         [JsonProperty("h")]
-        public double HighPrice { get; set; }
+        public decimal HighPrice { get; set; }
         [JsonProperty("l")]
-        public double LowPrice { get; set; }
+        public decimal LowPrice { get; set; }
         [JsonProperty("v")]
-        public double BaseAssetVolume { get; set; }
+        public decimal BaseAssetVolume { get; set; }
         [JsonProperty("n")]
         public int NumberOfTrades { get; set; }
         [JsonProperty("x")]
         public bool IsClosed { get; set; }
         [JsonProperty("q")]
-        public double QuoteAssetVolume { get; set; }
+        public decimal QuoteAssetVolume { get; set; }
         [JsonProperty("V")]
-        public double TakerBuyBaseAssetVolume { get; set; }
+        public decimal TakerBuyBaseAssetVolume { get; set; }
         [JsonProperty("Q")]
-        public double TakerBuyQuoteAssetVolume { get; set; }
+        public decimal TakerBuyQuoteAssetVolume { get; set; }
     }
 }

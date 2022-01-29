@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binance-Spot-API", "Binance-Spot-API\Binance-Spot-API.csproj", "{BE724AE4-AC68-44ED-8B4D-D36E3886F54E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binance-Spot-API.Test", "Binance-Spot-API.Test\Binance-Spot-API.Test.csproj", "{486D5477-091F-4C5C-B147-4EA3D19AA053}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binance-Spot-API.Test", "Binance-Spot-API.Test\Binance-Spot-API.Test.csproj", "{486D5477-091F-4C5C-B147-4EA3D19AA053}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@ namespace Binance_Spot_API.Model.Websocket.Payload
         [JsonProperty("a")]
         public string Asset { get; set; }
         [JsonProperty("d")]
-        public double BalanceDelta { get; set; }
+        public decimal BalanceDelta { get; set; }
         [JsonProperty("T")]
         public long ClearTime { get; set; }
     }
